@@ -1,1 +1,52 @@
-<p>ONO RABOTAET</p>
+
+<p>Вы на странице админа, заполните поля:</p>
+<p><b>ID (только при удалении или редактировании):</b><br>
+    <input type="number" size="40" name="id" [(ngModel)]="id">
+</p>
+<p><b>Имя:</b><br>
+    <input type="text" size="40" name="name" [(ngModel)]="name">
+</p>
+
+<p><b>Фамилия:</b><br>
+    <input type="text" size="40" name="surname" [(ngModel)]="surname">
+</p>
+
+<p><b>Отчество:</b><br>
+    <input type="text" size="40" name="patronymic" [(ngModel)]="patronymic">
+</p>
+<a class="knopka" (click)="submit(name, surname, patronymic)">Добавить автора</a>
+    <a class="knopka" (click)="delete(id)">Удалить автора</a>
+    <a class="knopka" (click)="update(name, surname, patronymic, id)">Редактировать автора</a>
+      
+    <br>
+    <table>
+        <tr>
+            <td>
+                <p>ID</p>
+            </td>
+            <td>
+                <p> Имя </p>
+            </td>
+            <td>
+                <p> Фамилия  </p>
+            </td>
+            <td>
+                <p>Отчество </p>
+            </td>
+        </tr>
+        <tr *ngFor="let author of authors">
+            <td>
+                <p> {{author["id"]}}</p>
+            </td>
+            <td>
+                <p>{{author["name"]}}</p>
+            <td>
+                <p> {{author["surname"]}}</p>
+            </td>
+            <td>
+                <p> {{author["patronymic"]}}</p>
+            </td>
+        </tr>
+    </table>
+
+ 
