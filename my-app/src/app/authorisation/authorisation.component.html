@@ -1,0 +1,14 @@
+<p align="center" style="color:gray">Требуется авторизация</p>
+
+<p align="center"><b>Введите логин: </b>
+    <input type="text" size="20" name="username" [(ngModel)]="username">
+</p>
+<p align="center"><b>Введите пароль: </b>
+    <input type="password" size="20" name="password" [(ngModel)]="password">
+</p>
+
+<p align="center"><button (click)="submit(username,password)"> Авторизоваться </button></p>
+<a routerLink="/registration">
+    <br><br><br><br><br><br>
+  <h6 align="center" style="color: black">Зарегистрироваться</h6>
+  </a>

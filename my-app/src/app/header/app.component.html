@@ -10,10 +10,13 @@
         <li><a a routerLink="/home" routerLinkActive="active">Акции</a></li>
         <li><a a routerLink="/home" routerLinkActive="active">Контакты</a></li>
         <li><a routerLink="/home" routerLinkActive="active">Доставка</a></li>
-        <li><a a routerLink="/admin" routerLinkActive="active">Админка</a></li>
-      </ul>
-
-</body>
+        <li> <a *ngIf = "isAdmin" routerLink="/admin" routerLinkActive="active"><h6 *ngIf = "isAdmin" align="center" style="color: black">Перейти на админку</h6></a></li>
+        <li><a *ngIf = "!loggedIn" routerLink="/registration" routerLinkActive="active">Зарегистрироваться</a></li>
+        <li><a *ngIf = "!loggedIn" routerLink="/authorisation" routerLinkActive="active">Войти</a></li>
+        </ul>
+        <a (click) = "logout()" routerLink="/authorisation" routerLinkActive="active">
+          <h6  *ngIf = "loggedIn" align="center" style="color: white">Выход</h6></a>
+</body> 
 <router-outlet></router-outlet>  
 
 </html>

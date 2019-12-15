@@ -1,0 +1,16 @@
+<form name="registrationform" (ngSubmit)="submit(username, password, passwordrepeat)">
+    <p align="center"><b>Введите логин: </b>
+        <input required type="text" size="20" name="username" [(ngModel)]="username">
+    </p>
+    <p align="center"><b>Введите пароль: </b>
+        <input required type="text" size="20" name="password" [(ngModel)]="password">
+    </p>
+    <p align="center"><b>Повторите пароль: </b>
+        <input required type="text" size="20" name="passwordrepeat" [(ngModel)]="passwordrepeat">
+    </p>
+    <p align="center"><button type="submit"> Зарегистрироваться </button></p>
+    </form>
+    <a routerLink="/authorisation">
+        <br><br><br><br><br><br>
+      <h6 align="center" style="color: black">Перейти к авторизации</h6>
+      </a>
