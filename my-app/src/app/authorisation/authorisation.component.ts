@@ -37,7 +37,6 @@ export class AuthorisationComponent implements OnInit {
         localStorage.setItem("isAdmin", data.admin.toString())
         console.log(localStorage)
         this.authService.login()
-        location.reload();
         this.router.navigate(['']);}
     );
   }
